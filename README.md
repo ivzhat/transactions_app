@@ -1,5 +1,7 @@
 # transactions_app
 An example app on Flutter
+login: user123
+password: 12345678
 
 ## Screenshots
 <img src="https://github.com/ivzhat/transactions_app/assets/52506165/247f611d-4333-4e7c-948c-abf22cc72ecd" width="200"/>
