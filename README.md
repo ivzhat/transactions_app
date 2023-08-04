@@ -1,16 +1,11 @@
 # transactions_app
+An example app on Flutter
 
-A new Flutter project.
+## Screenshots
+![image](https://github.com/ivzhat/transactions_app/assets/52506165/247f611d-4333-4e7c-948c-abf22cc72ecd)
+![image](https://github.com/ivzhat/transactions_app/assets/52506165/37e552c3-5be8-4bf8-a1ba-b6b180435823)
+![image](https://github.com/ivzhat/transactions_app/assets/52506165/669a375f-651d-406d-a763-1e479e8b9baf)
 
-## Getting Started
+### Flutter version
+Flutter (Channel stable, 3.3.10)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
