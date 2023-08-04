@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:transactions_app/scaffold_with_bottom_bar.dart';
-import 'package:transactions_app/ui/diagram.dart';
-import 'package:transactions_app/ui/transactions_page.dart';
-import 'ui/login.dart';
+import 'feature/transactions/ui/diagram.dart';
+import 'feature/transactions/ui/transactions_page.dart';
+import 'feature/auth/ui/login.dart';
 
 final GlobalKey<NavigatorState> _rootNavigatorKey = GlobalKey<NavigatorState>();
 final _shellNavigatorKey = GlobalKey<NavigatorState>();

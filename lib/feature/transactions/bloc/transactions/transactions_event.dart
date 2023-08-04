@@ -5,19 +5,22 @@ abstract class TransactionsEvent extends Equatable {
 }
 
 class TransactionsStarted extends TransactionsEvent{
+  const TransactionsStarted(this.transactionsDB);
+
+  final TransactionsDB transactionsDB;
   @override
-  // TODO: implement props
-  List<Object?> get props => throw UnimplementedError();
+  List<Object?> get props => [];
 }
 
 class TransactionsItemAdded extends TransactionsEvent{
   @override
-  // TODO: implement props
-  List<Object?> get props => throw UnimplementedError();
+  List<Object?> get props => [];
 }
 
 class TransactionsItemRemoved extends TransactionsEvent{
+  const TransactionsItemRemoved(this.id);
+
+  final int id;
   @override
-  // TODO: implement props
-  List<Object?> get props => throw UnimplementedError();
+  List<Object?> get props => [];
 }
