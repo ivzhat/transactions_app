@@ -15,7 +15,7 @@ final GoRouter appRouter = GoRouter(
     GoRoute(
       path: '/',
       builder: (context, state) {
-        return const LoginPage();
+        return LoginPage();
       },
     ),
     ShellRoute(
@@ -44,7 +44,7 @@ final GoRouter appRouter = GoRouter(
           parentNavigatorKey: _shellNavigatorKey,
           path: '/diagram',
           pageBuilder: (context, state) {
-            return NoTransitionPage(
+            return const NoTransitionPage(
               child: Scaffold(
                 body: DiagramPage(),
               ),

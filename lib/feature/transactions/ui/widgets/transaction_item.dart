@@ -10,10 +10,10 @@ class TransactionItem extends StatefulWidget {
       {super.key, required this.transaction, required this.onRemove,});
 
   @override
-  _TransactionItemState createState() => _TransactionItemState();
+  TransactionItemState createState() => TransactionItemState();
 }
 
-class _TransactionItemState extends State<TransactionItem> {
+class TransactionItemState extends State<TransactionItem> {
   bool _expanded = false;
 
   @override
@@ -32,17 +32,26 @@ class _TransactionItemState extends State<TransactionItem> {
         ),
         if (_expanded)
           Container(
-            // padding: const EdgeInsets.symmetric(horizontal: 15.0),
+            padding: const EdgeInsets.symmetric(horizontal: 50.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text('Дата транзакции: ${DateFormat('dd.MM.y HH:mm').format(widget.transaction.date)}'),
+                const SizedBox(height: 5.0),
                 Text('Сумма: ${widget.transaction.sum}'),
+                const SizedBox(height: 5.0),
                 Text('Комиссия: ${widget.transaction.commission}'),
+                const SizedBox(height: 5.0),
                 Text('Итого: ${widget.transaction.total}'),
+                const SizedBox(height: 5.0),
                 Text('Номер транзакции: ${widget.transaction.number}'),
+                const SizedBox(height: 5.0),
                 Text('Тип транзакции: ${widget.transaction.type}'),
+                const SizedBox(height: 5.0),
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: const Size.fromHeight(40), // NEW
+                  ),
                   onPressed: widget.onRemove,
                   child: const Text('Отменить транзакцию'),
                 ),

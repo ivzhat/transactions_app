@@ -17,7 +17,7 @@ class TransactionsDB {
       PRIMARY KEY("id" AUTOINCREMENT)
       );"""
     );
-    final List<Map<String, dynamic>> _transactions = [
+    final List<Map<String, dynamic>> transactions = [
       {
         'date': DateTime.now().millisecondsSinceEpoch,
         'type': 'Перевод',
@@ -67,7 +67,7 @@ class TransactionsDB {
         'number': '678',
       },
     ];
-    for (var element in _transactions) {
+    for (var element in transactions) {
       await database.rawInsert('''INSERT INTO $tableName (date, type, sum, commission, total, number) VALUES (?,?,?,?,?,?)''',
         [element['date'], element['type'], element['sum'], element['commission'], element['total'], element['number']]
       );
