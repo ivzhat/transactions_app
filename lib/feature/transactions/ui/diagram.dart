@@ -12,11 +12,7 @@ class DiagramPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<TransactionsBloc, TransactionsState>(
       builder: (context, state) {
-        if (state is TransactionsInitial) {
-          return const Center(
-            child: CircularProgressIndicator(),
-          );
-        } else if (state is TransactionsLoading) {
+        if (state is TransactionsInitial || state is TransactionsLoading) {
           return const Center(
             child: CircularProgressIndicator(),
           );

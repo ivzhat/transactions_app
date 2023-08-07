@@ -1,26 +1,15 @@
 part of 'transactions_bloc.dart';
 
-abstract class TransactionsEvent extends Equatable {
+abstract class TransactionsEvent {
   const TransactionsEvent();
 }
 
-class TransactionsStarted extends TransactionsEvent{
-  const TransactionsStarted(this.transactionsDB);
+class TransactionsStarted extends TransactionsEvent{}
 
-  final TransactionsDB transactionsDB;
-  @override
-  List<Object?> get props => [];
-}
-
-class TransactionsItemAdded extends TransactionsEvent{
-  @override
-  List<Object?> get props => [];
-}
+class TransactionsItemAdded extends TransactionsEvent{}
 
 class TransactionsItemRemoved extends TransactionsEvent{
   const TransactionsItemRemoved(this.id);
 
   final int id;
-  @override
-  List<Object?> get props => [];
 }

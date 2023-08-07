@@ -15,7 +15,7 @@ final GoRouter appRouter = GoRouter(
     GoRoute(
       path: '/',
       builder: (context, state) {
-        return LoginPage();
+        return const LoginPage();
       },
     ),
     ShellRoute(
@@ -33,7 +33,7 @@ final GoRouter appRouter = GoRouter(
           parentNavigatorKey: _shellNavigatorKey,
           path: '/transactions',
           pageBuilder: (context, state) {
-            return NoTransitionPage(
+            return const NoTransitionPage(
               child: Scaffold(
                 body: TransactionsPage(),
               ),

@@ -3,16 +3,13 @@ import 'package:go_router/go_router.dart';
 import 'package:transactions_app/feature/auth/bloc/auth_bloc.dart';
 import 'widgets/transaction_item.dart';
 import '../bloc/transactions/transactions_bloc.dart';
-import '../database/transactions_db.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 class TransactionsPage extends StatelessWidget {
-  TransactionsPage({super.key});
-
-  final transactionsDB = TransactionsDB();
+  const TransactionsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    BlocProvider.of<TransactionsBloc>(context).add(TransactionsStarted(transactionsDB));
+    BlocProvider.of<TransactionsBloc>(context).add(TransactionsStarted());
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
@@ -35,11 +32,7 @@ class TransactionsPage extends StatelessWidget {
         },
         child: BlocBuilder<TransactionsBloc, TransactionsState>(
           builder: (context, state) {
-            if (state is TransactionsInitial) {
-              return const Center(
-                child: CircularProgressIndicator(),
-              );
-            } else if (state is TransactionsLoading) {
+            if (state is TransactionsInitial || state is TransactionsLoading) {
               return const Center(
                 child: CircularProgressIndicator(),
               );
